@@ -6,14 +6,20 @@ function onBodyLoad(){
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
-function on onDeviceReady(){
-	existe_db = window.localStorage.getItem("existe_db");
-	db = window.openDatabase("base_datos", "1.0", "DB apps", 2000);
+function  onDeviceReady(){
+	db = window.openDatabase("datos_usuario", "1.0", "DB apps", 20000);
 	if(existe_db == null){
 		creaDB();
 	}
 }
 
+
+function logeo(){
+	var usuario = $('#login_user').val();
+	if(usuario == "Marco"){
+		$("#new_salesman").css("display", "block");
+	}
+}
 
 /*
 /	creación de la base de datos
@@ -25,7 +31,7 @@ function creaDB(){
 
 function creaNuevaDB(tx){
 	tx.executeSql('DROP TABLE IF EXISTS datos_usuario');
-	tx.executeSql('DROP TABLE IF EXISTS datos_productos');
+//	tx.executeSql('DROP TABLE IF EXISTS datos_productos');
 
 	var sql1 = "CREATE TABLE IF NOT EXISTS datos_usuario ("+
 		"id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -38,7 +44,7 @@ function creaNuevaDB(tx){
 		"email VARCHAR(30), " +
 		"pass VARCHAR(30) )";
 
-	var sql2 = "CREATE TABLE IF NOT EXISTS datos_productos(" +
+/*	var sql2 = "CREATE TABLE IF NOT EXISTS datos_productos(" +
 		"idProducto INTEGER PRIMARY KEY AUTOINCREMENT, " +
 		"numModel VARCHAR(20), " +
 		"serial VARCHAR(30), " +
@@ -47,9 +53,10 @@ function creaNuevaDB(tx){
 		"oldModel VARCHAR(20), " +
 		"confirmation INTEGER(2), " +
 		"note VARCHAR(50) )";
+		*/
 
 	tx.executeSql(sql1);
-	tx.executeSql(sql2);
+//	tx.executeSql(sql2);
 
 	tx.executeSql("INSERT INTO datos_usuario (id, name, user, company, country, city, telephone, email, pass) VALUES
 	(1,'MARCO','marco','estadistica','Mexico','DF','0445545491420','marco.demetrio@gmail.com','demeterio') ");

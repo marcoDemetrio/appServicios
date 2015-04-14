@@ -1,0 +1,256 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pump App</title>
+<title>App</title>
+
+
+<link href="css/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/basic.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<!-- Página de Inicio -->
+<div data-role="page" id="welcome">
+	<div data-role="header" class="header">
+		<h1>Welcome</h1>
+	</div>
+	<div data-role="content">  
+    	<center>
+        	<img src="images/welcome2.png" width="440" height="120" alt="" />
+    		<div data-role="fieldcontain" id="new_salesman" style="display:none">
+    		  	<a href="#registro_user" data-role="button">New Salesman</a>
+  		  	</div>
+            <div id="login" style="display:block">
+            	<br><br>
+            	<h2>Login</h2>
+            	<div data-role="fieldcontain">
+            	  <input type="text" name="user" id="user" value=""  placeholder="User" />
+          	  	</div>
+                <div data-role="fieldcontain">
+            	  <input type="password" name="pass" id="pass" value="" placeholder="Password" />
+          	  	</div>
+         <!--       <button id="b_login">Submit</button>   -->
+                <a href="#menu" data-role="button">Submit</a>
+        	</div>
+    	</center>
+    </div>
+</div>
+
+
+<!-- página para registro del usuario -->
+<div data-role="page" id="registro_user">
+	<div data-role="header" class="header">
+		<h2>New Salesman Registration</h2>
+	</div>
+    <div data-role="content">
+    	<center>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_name" id="ti_name" value="" placeholder="Name"  />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_user" id="ti_user" value="" placeholder="User name" />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_company" id="ti_company" value="" placeholder="Company Name"  />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_country" id="ti_country" value="" placeholder="Country"/>
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_city" id="ti_city" value="" placeholder="City" />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_phone" id="ti_phone" value="" placeholder="Telephone" />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="email" name="ti_email" id="ti_email" value="" placeholder="Email" />
+            </div>
+            <div data-role="fieldcontain">
+                <input type="text" name="ti_pass" id="ti_pass" value="" placeholder="Password" />
+            </div>
+      <!--      <button id="b_enviar_user">Submit</button>  -->
+            <a href="#welcome" data-role="button">Submit</a>
+  	</center>
+  </div>
+</div>
+
+
+<!-- Menú -->
+<div data-role="page" id="menu">
+	<div data-role="header" class="header">
+		<h1>Menu</h1>
+	</div>
+	<div data-role="content"> 
+    	<center>
+    		<img src="images/welcome2.png" width="440" height="120" alt="" />
+        </center>
+        <br><br><br><br>
+      <ul data-role="listview" class="mainmenu">
+        <li><a href="#new_pump">New Pump Form</a></li>
+        <li><a href="#record">Record</a></li>
+        <li><a href="#info">Salesman Info</a></li>
+      </ul>
+    </div>
+</div>
+
+
+<!-- página registro ventas -->
+<div data-role="page" id="new_pump">
+	<div data-role="header" class="header">
+		<h1>New Pump Form</h1>
+	</div>
+	<div data-role="content">
+    
+       <div data-role="fieldcontain">
+        <label for="selectmenu" class="select">Model Number:</label>
+        <select name="selectmenu" id="selectmenu">
+          <option value="option1">TY-AA-356</option>
+          <option value="option2">TY-AA-358</option>
+          <option value="option3">TY-AA-370</option>
+        </select>
+      </div>
+      
+      <div data-role="fieldcontain">
+        <label for="textinput4">Serial Number:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+      
+      <div data-role="fieldcontain">
+        <label for="textinput4">Quantity:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+      
+      
+    <div data-role="fieldcontain">
+        <label for="selectmenu" class="select">Country:</label>
+        <select name="selectmenu" id="selectmenu">
+          <option value="option1">Mexico</option>
+          <option value="option2">USA</option>
+          <option value="option3">Canada</option>
+        </select>
+      </div>
+      
+      
+      
+     <div data-role="fieldcontain">
+        <label for="selectmenu" class="select">State:</label>
+        <select name="selectmenu" id="selectmenu">
+          <option value="option1">DF</option>
+          <option value="option2">Monterrey</option>
+          <option value="option3">Guadalajara</option>
+        </select>
+      </div>
+      
+      
+      <div data-role="fieldcontain">
+        <label for="textinput4">Company:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+      
+      <div data-role="fieldcontain">
+        <label for="textinput4">Old pump model:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+      
+      
+      <div data-role="fieldcontain">
+        <label for="flipswitch">Confirmed Sale:</label>
+        <select name="flipswitch" id="flipswitch" data-role="slider">
+          <option value="off">No</option>
+          <option value="on">Yes</option>
+        </select>
+      </div>
+      
+      
+      
+      <div data-role="fieldcontain">
+        <label for="textinput4">Note:</label>
+        <input type="text" name="textinput4" id="textinput4" value=""  />
+      </div>
+      <input type="submit" value="Submit" data-icon="check" />
+ </div>
+</div>
+
+
+<div data-role="page" id="record">
+	<div data-role="header" class="header">
+		<h1>Records</h1>
+	</div>
+	<div data-role="content">
+	  <ul data-role="listview">
+	    <li><a href="#page9">Monthly Records</a></li>
+	    <li><a href="#page10">Annual Records</a></li>
+	    <li><a href="#page11">Overall Ranking</a></li>
+      </ul>	
+			
+	</div>
+	<div data-role="footer" class="footer">
+		<a href="#menu" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+
+<div data-role="page" id="info">
+	<div data-role="header" class="header">
+		<h1>Salesman Info</h1>
+	</div>
+	<div data-role="content">	
+		<p>Name: John Smith </p>
+        <p>ID : 0023 </p>
+        
+        <p>Country: Mexico</p>
+        <p>Job Title: Salesman </p>
+	</div>
+	<div data-role="footer" class="footer">
+		<a href="#menu" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+
+<div data-role="page" id="page9">
+	<div data-role="header" class="header">
+		<h1>Monthly Records</h1>
+	</div>
+	<div data-role="content">	
+    <a class="image_container"> <center>
+    <img src="images/sales1.jpg"  alt=""/>  </center></a>
+     </div>
+	<div data-role="footer" class="footer">
+		<a href="#page7" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+<div data-role="page" id="page10">
+	<div data-role="header" class="header">
+		<h1>Annual Records</h1>
+	</div>
+	<div data-role="content">	
+	<a class="image_container"> <center>
+    <img src="images/sales2.jpg"  alt=""/>  </center></a>
+	</div>
+	<div data-role="footer" class="footer">
+		<a href="#page7" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+<div data-role="page" id="page11">
+	<div data-role="header" class="header">
+		<h1>Overall Ranking</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" class="footer">
+		<a href="#page7" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+
+
+</body>
+</html>

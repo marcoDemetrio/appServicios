@@ -15,7 +15,7 @@ Marco Antonio Demetrio López
 </author>
 
 
-<icon src="images/logo.gif"
+<icon src="images/logo.gif" />
 
 <gap:plugin name="org.apache.cordova.dialogs" />
 <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />

@@ -4,18 +4,18 @@
     id        = "com.phonegap.example"
     version   = "1.0.0">
 
-<name>PhoneGap Build Application</name>
+<name>Servicios Estadisticos</name>
 
 <description>
-A simple PhoneGap Build application.
+Apps para los servicios estadisticos
 </description>
 
-<author href="https://example.com" email="you@example.com">
-Your Name
+<author href="" email="marco.demetrio@gmail.com">
+Marco Antonio Demetrio López
 </author>
 
 
 <gap:plugin name="org.apache.cordova.dialogs" />
 
-<preference name="phonegap-version" value="3.3.0" />
+<preference name="phonegap-version" value="3.7.0" />
 </widget>

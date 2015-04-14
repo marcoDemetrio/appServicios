@@ -15,9 +15,15 @@ function  onDeviceReady(){
 
 
 function logeo(){
-	var usuario = $('#login_user').val();
-	if(usuario == "Marco"){
-		$("#new_salesman").css("display", "block");
+	
+	var b_new = document.getElementById("new_salesman");
+	var usuario = document.getElementById("login_user");
+	var clave = document.getElementById("login_pass");
+	
+	if(usuario.value == "Marco"){
+		b_new.style.display = "none";
+	}else{
+		clave.value = "Error";
 	}
 }
 

@@ -14,19 +14,6 @@ function  onDeviceReady(){
 }
 
 
-function logeo(){
-	
-	var b_new = document.getElementById("new_salesman");
-	var usuario = document.getElementById("login_user");
-	var clave = document.getElementById("login_pass");
-	
-	if(usuario.value == "Marco"){
-		b_new.style.display = "none";
-	}else{
-		clave.value = "Error";
-	}
-}
-
 /*
 /	creación de la base de datos
 */
@@ -63,16 +50,13 @@ function creaNuevaDB(tx){
 
 	tx.executeSql(sql1);
 //	tx.executeSql(sql2);
+ 
 
-	tx.executeSql("INSERT INTO datos_usuario (id, name, user, company, country, city, telephone, email, pass) VALUES
-	(1,'MARCO','marco','estadistica','Mexico','DF','0445545491420','marco.demetrio@gmail.com','demeterio') ");
+	tx.executeSql("INSERT INTO datos_usuario (id, name, user, company, country, city, telephone, email, pass) VALUES "+
+	"(1,'MARCO','marco','estadistica','Mexico','DF','0445545491420','marco.demetrio@gmail.com','demeterio') ");
 
 }
 
-function creaSuccess(){
-	window.localStorage.setItem("existe_db", 1);
-	cargarBD();
-}
 
 function errorDB(err){
 	navigator.notification.alert("Error procesando SQL " + err.code);

@@ -3,50 +3,19 @@
 var existe_db
 var db
 
-function onBodyLoad(){
+function onBodyLoad()
+{
 	document.addEventListener("deviceready", onDeviceReady, false);
-	navigator.notification.alert("Si funciona");
-	
-	$("#b_login").click(function(e) {
-		 var usuario = $("#login_user").val();
-		 var clave = $("#login_pass").val();
-		 var new_salesman = $("#new_salesman").val();
-		 
-		 if(usuario == "Marco" && clave == "demetrio"){
-			window.location.href ="#menu";
-			$.mobile.changePage("#menu");
-			
-		 }else{
-			 alert("A ingresado mal el nombre de usuario o la pass");
-		 }
-	});   
-	
 }
 
-function  onDeviceReady(){
-	alert("PhoneGap is working alert");
-	navigator.notification.alert("si funciona");
+function onDeviceReady()
+{
 	
 	if(!detectDevice()){
 	  navigator.notification.alert("El sistema operativo de su dispositivo no permite ejecutar esta aplicación");
   	}else{
 		
-		
-		$("#b_login").click(function(e) {
-		 var usuario = $("#login_user").val();
-		 var clave = $("#login_pass").val();
-		 var new_salesman = $("#new_salesman").val();
-		 
-		 if(usuario == "Marco" && clave == "demetrio"){
-			window.location.href ="#menu";
-			$.mobile.changePage("#menu");
-			
-		 }else{
-			 alert("A ingresado mal el nombre de usuario o la pass");
-		 }
-	});   
-		
-		
+		navigator.notification.alert("si funciona");	
 		
 	}
 }

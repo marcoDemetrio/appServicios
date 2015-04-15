@@ -15,20 +15,28 @@
     <script type="text/javascript">
 	$(document).ready(function(e) {
         $("#b_login").click(function(e) {
-		 var usuario = $("#login_user").val();
-		 var clave = $("#login_pass").val();
-		 var new_salesman = $("#new_salesman").val();
-		 
-		 if(usuario == "Marco" && clave == "demetrio"){
-			window.location.href ="#menu";
-		//	$.mobile.changePage("#menu");
-			
-		 }else{
-			 alert("A ingresado mal el nombre de usuario o la pass");
-		 }
-	});   
+			 var usuario = $("#login_user").val();
+			 var clave = $("#login_pass").val();
+			 var new_salesman = $("#new_salesman").val();
+			 
+			 if(usuario == "admin" && clave == "123456"){
+				window.location.href ="#menu";
+			//	$.mobile.changePage("#menu");
+				
+			 }else{
+				 alert("A ingresado mal el nombre de usuario o la pass");
+			 }
+		});
 	
-    });
+	$("#b_new_pump").click(function(e) {
+		 
+		 alert("Submit");
+		 window.location.href = "#menu";
+		 
+	});
+	   
+	
+});
 		
 	</script>
 
@@ -44,7 +52,7 @@
 	<div data-role="content">  
     	<center>
         	<img src="images/welcome2.png" width="440" height="120" alt="" />
-    		<div data-role="fieldcontain" id="new_salesman" style="display: none">
+    		<div data-role="fieldcontain" id="new_salesman" style="display: block">
     		  	<a href="#registro_user" data-role="button">New Salesman</a>
   		  	</div>
             <div id="login" style="display:block">
@@ -57,7 +65,7 @@
                 <div data-role="fieldcontain">
             	  <input type="password" name="login_pass" id="login_pass" value="" placeholder="Password" />
           	  	</div>
-                <button id="b_login">pruebas</button> 
+                <button id="b_login">Submit</button> 
 	
         	</div>
     	</center>
@@ -159,8 +167,6 @@
         </select>
       </div>
       
-      
-      
      <div data-role="fieldcontain">
         <label for="selectmenu" class="select">State:</label>
         <select name="selectmenu" id="selectmenu">
@@ -169,7 +175,6 @@
           <option value="option3">Guadalajara</option>
         </select>
       </div>
-      
       
       <div data-role="fieldcontain">
         <label for="textinput4">Company:</label>
@@ -181,7 +186,6 @@
         <input type="text" name="textinput4" id="textinput4" value=""  />
       </div>
       
-      
       <div data-role="fieldcontain">
         <label for="flipswitch">Confirmed Sale:</label>
         <select name="flipswitch" id="flipswitch" data-role="slider">
@@ -190,13 +194,12 @@
         </select>
       </div>
       
-      
-      
       <div data-role="fieldcontain">
         <label for="textinput4">Note:</label>
         <input type="text" name="textinput4" id="textinput4" value=""  />
       </div>
-      <input type="submit" value="Submit" data-icon="check" />
+      <button id="b_new_pump">Submit</button>
+      
  </div>
 </div>
 

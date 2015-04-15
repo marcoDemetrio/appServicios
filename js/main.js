@@ -9,7 +9,8 @@ function onBodyLoad(){
 }
 
 function  onDeviceReady(){
-	navigator.notification.alert("PhoneGap is working");
+	alert("PhoneGap is working alert");
+	navigator.notification.alert("si funciona");
 	
 	if(!detectDevice()){
 	  navigator.notification.alert("El sistema operativo de su dispositivo no permite ejecutar esta aplicación");
@@ -23,9 +24,10 @@ function  onDeviceReady(){
 		 
 		 if(usuario == "Marco" && clave == "demetrio"){
 			window.location.href ="#menu";
+			$.mobile.changePage("#menu");
 			
 		 }else{
-			 navigator.notification.alert("A ingresado mal el nombre de usuario o la pass");
+			 alert("A ingresado mal el nombre de usuario o la pass");
 		 }
 	});   
 		

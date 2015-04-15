@@ -5,6 +5,21 @@ var db
 
 function onBodyLoad(){
 	document.addEventListener("deviceready", onDeviceReady, false);
+	navigator.notification.alert("Si funciona");
+	
+	$("#b_login").click(function(e) {
+		 var usuario = $("#login_user").val();
+		 var clave = $("#login_pass").val();
+		 var new_salesman = $("#new_salesman").val();
+		 
+		 if(usuario == "Marco" && clave == "demetrio"){
+			window.location.href ="#menu";
+			$.mobile.changePage("#menu");
+			
+		 }else{
+			 alert("A ingresado mal el nombre de usuario o la pass");
+		 }
+	});   
 	
 }
 

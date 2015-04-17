@@ -28,11 +28,10 @@
 			 }
 		});
 	
-	$("#b_new_pump").click(function(e) {
-		// navigator.notification.alert("Send File");
+		$("#b_pump").click(function(e) {
 		 alert("Send");
 		 window.location.href ="#menu";
-		 $.mobile.changePage("#menu");
+			$.mobile.changePage("#menu");
 		 
 	});
 	   
@@ -199,7 +198,8 @@
         <label for="textinput4">Note:</label>
         <input type="text" name="textinput4" id="textinput4" value=""  />
       </div>
-      <button id="b_new_pump">Submit</button>
+      <a href="#menu" data-role="button" id="b_pump">Submit</a>
+    <!--  <button id="b_pump">Submit</button> -->
       
  </div>
 </div>
